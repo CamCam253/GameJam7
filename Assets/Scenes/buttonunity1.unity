@@ -1011,6 +1011,7 @@ MonoBehaviour:
   - {fileID: 1926187808}
   - {fileID: 509554805}
   - {fileID: 1904800808}
+  lightsOn: 0
 --- !u!1 &700307469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1152,7 @@ MonoBehaviour:
   - {fileID: 521815141}
   - {fileID: 1775625839}
   - {fileID: 317897654}
+  lightsOn: 0
 --- !u!1 &786049398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,6 +2440,7 @@ MonoBehaviour:
   - {fileID: 1775625839}
   - {fileID: 317897654}
   - {fileID: 521815141}
+  lightsOn: 0
 --- !u!1 &1775625838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,7 +3017,8 @@ MonoBehaviour:
   - {fileID: 105087756}
   - {fileID: 1342081596}
   - {fileID: 1926187808}
-  - {fileID: 1904800808}
+  - {fileID: 932891638}
+  lightsOn: 0
 --- !u!1 &2033027884
 GameObject:
   m_ObjectHideFlags: 0
