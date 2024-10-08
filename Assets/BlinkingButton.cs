@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Engine.UI;
+using UnityEngine.UI;
 
 public class BlinkingButton : MonoBehaviour
 {
     public float blinkSpeed = 1f; // Vilkku nopeus
-    // private Image buttonImage; Lis‰‰tteh‰n t‰h‰n sit.
+    public Image buttonImage; //paitti siin ei oo mtn kuvaa nyt
     public bool isBlinking = true;
 
     public Button button1;
@@ -32,18 +32,19 @@ public class BlinkingButton : MonoBehaviour
         button9.onClick.AddListener(() => OnButtonClick(9));
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        float alpha = Math.Abs(Mathf.Sin(Time.time * blinkSpeed));
+        float alpha = Mathf.Abs(Mathf.Sin(Time.time * blinkSpeed));
         Color newColor = buttonImage.color;
-        newColor.a = alhpa;
+        newColor.a = alpha;
         buttonImage.color = newColor;
     }
 
     void OnButtonClick(int buttonNumber)
     {
-        Debug.Log("Button " + buttonNumber + " clicked!"); // t‰s n‰kee mit‰ kaikkee tapahtuu
+        Debug.Log("Button " + buttonNumber + " clicked!"); // t‰s n‰kee mitÅEkaikkee tapahtuu
     }
 
     public void ToggleBlinking(bool state)
