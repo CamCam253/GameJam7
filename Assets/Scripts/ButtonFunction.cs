@@ -9,6 +9,7 @@ public class ButtonFunction : MonoBehaviour
 {
 
     public Button button;
+    public List<Transform> lights;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,10 @@ public class ButtonFunction : MonoBehaviour
     }
     void Clicked()
     {
-        UnityEngine.Debug.Log("Clicked");
+        foreach (var light in lights)
+        {
+            Image on = light.GetChild(0).GetComponentInChildren<Image>(true);
+            on.enabled = !on.enabled;
+        }
     }
 }
