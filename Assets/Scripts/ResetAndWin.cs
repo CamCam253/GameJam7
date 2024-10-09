@@ -11,6 +11,7 @@ public class ResetAndWin : MonoBehaviour
     public int lightsOff;
     public List<Transform> lights;
     public Button reset;
+    public int sceneNum;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +44,7 @@ public class ResetAndWin : MonoBehaviour
         if (lightsOn == lights.Count && lightsOff == 0)
         {
             //Vaihtää skenee jos kaikki valot ovat päällä
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(sceneNum);
         }
         else
         {
