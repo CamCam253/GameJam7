@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 public class ResetAndWin : MonoBehaviour
 {
@@ -42,7 +42,8 @@ public class ResetAndWin : MonoBehaviour
 
         if (lightsOn == lights.Count && lightsOff == 0)
         {
-            UnityEngine.Debug.Log("You Win!");
+            //Vaihtää skenee jos kaikki valot ovat päällä
+            SceneManager.LoadScene(2);
         }
         else
         {
