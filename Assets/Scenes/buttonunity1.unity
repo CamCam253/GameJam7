@@ -325,8 +325,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Reset
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 67bf635a6ac8f9b45a55494d8eee485a, type: 2}
+  m_sharedMaterial: {fileID: -2176101097605755531, guid: 67bf635a6ac8f9b45a55494d8eee485a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -610,6 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightsOn: 0
+  lightsOff: 0
   lights:
   - {fileID: 105087756}
   - {fileID: 1342081596}
@@ -620,11 +621,6 @@ MonoBehaviour:
   - {fileID: 1775625839}
   - {fileID: 317897654}
   - {fileID: 521815141}
-  buttons:
-  - {fileID: 1943214249}
-  - {fileID: 1750897627}
-  - {fileID: 639485012}
-  - {fileID: 700307471}
   reset: {fileID: 260029217}
 --- !u!1 &317897653
 GameObject:
@@ -1431,8 +1427,7 @@ MonoBehaviour:
   lights:
   - {fileID: 105087756}
   - {fileID: 521815141}
-  - {fileID: 1775625839}
-  - {fileID: 317897654}
+  - {fileID: 509554805}
 --- !u!1 &786049398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,8 +2712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1750897627}
   lights:
-  - {fileID: 1904800808}
-  - {fileID: 509554805}
+  - {fileID: 1342081596}
   - {fileID: 1775625839}
   - {fileID: 317897654}
 --- !u!1 &1775625838
@@ -3294,10 +3288,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1943214249}
   lights:
-  - {fileID: 105087756}
-  - {fileID: 1342081596}
   - {fileID: 1926187808}
   - {fileID: 932891638}
+  - {fileID: 1904800808}
 --- !u!1 &2033027884
 GameObject:
   m_ObjectHideFlags: 0
