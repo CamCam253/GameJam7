@@ -29,7 +29,7 @@ public class ResetAndWin : MonoBehaviour
     {
         foreach (var light in lights)
         {
-            Image on = light.GetChild(0).GetComponentInChildren<Image>(true);
+            RawImage on = light.GetChild(0).GetComponentInChildren<RawImage>(true);
 
 
             if (on.enabled == true && lightsOn < lights.Count)
@@ -65,7 +65,7 @@ public class ResetAndWin : MonoBehaviour
     {
         foreach (var light in lights)
         {
-            Image on = light.GetChild(0).GetComponentInChildren<Image>(true);
+            RawImage on = light.GetChild(0).GetComponentInChildren<RawImage>(true);
             on.enabled = false;
         }
         successMessage.gameObject.SetActive(false);
