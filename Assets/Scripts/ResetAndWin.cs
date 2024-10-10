@@ -12,6 +12,7 @@ public class ResetAndWin : MonoBehaviour
     public List<Transform> lights;
     public Button reset;
     public int sceneNum;
+    public Text successMessage;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,8 @@ public class ResetAndWin : MonoBehaviour
         lightsOn = 0;
         lightsOff = lights.Count;
         reset.onClick.AddListener(Reset);
+
+        successMessage.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -45,6 +48,11 @@ public class ResetAndWin : MonoBehaviour
         {
             //Vaihtää skenee jos kaikki valot ovat päällä
             SceneManager.LoadScene(sceneNum);
+            successMessage.text = "You win!";
+            successMessage.gameObject.SetActive(true);
+
+            // Pieni odotus hetki
+            Invoke("LoadNextScene", 2.0f);
         }
         else
         {
@@ -60,5 +68,10 @@ public class ResetAndWin : MonoBehaviour
             RawImage on = light.GetChild(0).GetComponentInChildren<RawImage>(true);
             on.enabled = false;
         }
+        successMessage.gameObject.SetActive(false);
+   }
+    void LoadNextScene()
+    {
+        SceneManager.LoadScene(sceneNum);
     }
 }
