@@ -12,7 +12,7 @@ public class ResetAndWin : MonoBehaviour
     public List<Transform> lights;
     public Button reset;
     public int sceneNum;
-    public Text successMessage;
+    public TMP_Text successMessage;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +52,7 @@ public class ResetAndWin : MonoBehaviour
             successMessage.gameObject.SetActive(true);
 
             // Pieni odotus hetki
-            Invoke("LoadNextScene", 2.0f);
+            Invoke("LoadNextScene", 5.0f);
         }
         else
         {
