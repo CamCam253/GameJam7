@@ -26,7 +26,7 @@ public class ButtonFunction : MonoBehaviour
     {
         foreach (var light in lights)
         {
-            Image on = light.GetChild(0).GetComponentInChildren<Image>(true);
+            RawImage on = light.GetChild(0).GetComponentInChildren<RawImage>(true);
             on.enabled = !on.enabled;
         }
     }
